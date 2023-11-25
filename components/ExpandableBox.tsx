@@ -2,6 +2,7 @@
 "use client"
 // components/ExpandableBox.tsx
 // components/ExpandableBox.tsx
+// components/ExpandableBox.tsx
 import React, { useState } from 'react';
 
 interface ExpandableBoxProps {
@@ -17,7 +18,7 @@ const ExpandableBox: React.FC<ExpandableBoxProps> = ({ title, content }) => {
   };
 
   return (
-    <div className="mb-4">
+    <div className="mb-4 w-full">
       <div className={`rounded bg-blue-700 overflow-hidden mb-2 ${expanded ? 'h-auto' : 'h-16'}`}>
         <div className="p-4">
           <div className="flex justify-between items-center mb-2">
@@ -37,6 +38,7 @@ const ExpandableBox: React.FC<ExpandableBoxProps> = ({ title, content }) => {
 };
 
 export default ExpandableBox;
+
 
 
 
