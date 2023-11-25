@@ -1,6 +1,7 @@
 // components/ExpandableBox.tsx
 "use client"
 // components/ExpandableBox.tsx
+// components/ExpandableBox.tsx
 import React, { useState } from 'react';
 
 interface ExpandableBoxProps {
@@ -16,24 +17,27 @@ const ExpandableBox: React.FC<ExpandableBoxProps> = ({ title, content }) => {
   };
 
   return (
-    <div className={` p-4 mb-4 transition-transform duration-500 transform ${expanded ? 'translate-y-0' : 'translate-y-[-10px]'}`}>
-      <div className={`rounded bg-blue-700 p-4 mb-2`}>
-        <div className="flex justify-between items-center mb-2">
-          <h2 className="text-lg font-bold text-white">{title}</h2>
-          <button
-            className="text-white hover:text-blue-700 focus:outline-none"
-            onClick={toggleExpand}
-          >
-            {expanded ? '-' : '+'}
-          </button>
+    <div className="mb-4">
+      <div className={`rounded bg-blue-700 overflow-hidden mb-2 ${expanded ? 'h-auto' : 'h-16'}`}>
+        <div className="p-4">
+          <div className="flex justify-between items-center mb-2">
+            <h2 className="text-lg font-bold text-white">{title}</h2>
+            <button
+              className="text-white hover:text-blue-700 focus:outline-none"
+              onClick={toggleExpand}
+            >
+              {expanded ? '-' : '+'}
+            </button>
+          </div>
+          <p className={`text-white ${expanded ? 'block' : 'hidden'}`}>{content}</p>
         </div>
-        {expanded && <p className="text-white">{content}</p>}
       </div>
     </div>
   );
 };
 
 export default ExpandableBox;
+
 
 
 
