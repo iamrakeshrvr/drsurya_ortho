@@ -31,7 +31,7 @@ export default function Home() {
         <div className='flex space-x-4'>
           <ExpandableBox title="Batlagundu" content="Dr.Suriya clinic, Batlagundu" />
           <ExpandableBox title="Kallupatty" content="Dr.Suriya clinic, Kallupatty" />
-          <ExpandableBox title="Thummalapatty" content="Dr.Suriya clinic, Thummalapatty" />
+          
         </div>  
       </div>
       
